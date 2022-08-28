@@ -73,7 +73,7 @@ export default function App() {
             {checkDice() ? <Confetti numberOfPieces={500}/> : null}
             <h1 className="text-[1.75rem] font-bold">Tenzies</h1>
             {checkDice() ? <p className="w-full bg-violet-800 text-white rounded-lg p-3">CONGRATS!!<br/> You have matched all the tiles!</p> 
-            : <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls</p>}
+            : <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>}
             <div className="w-full grid gap-[15px] grid-cols-5 font-bold mt-5">
                 {diceElements}
             </div>
