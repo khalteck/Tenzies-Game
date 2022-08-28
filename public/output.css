@@ -585,6 +585,14 @@ video {
   width: 100%;
 }
 
+.w-\[355px\] {
+  width: 355px;
+}
+
+.max-w-\[360px\] {
+  max-width: 360px;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -736,6 +744,11 @@ video {
 .py-\[200px\] {
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .pt-\[200px\] {

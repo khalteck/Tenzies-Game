@@ -69,18 +69,20 @@ export default function App() {
     }
     
     return (
-        <main className="w-[100%] sm:w-[360px] p-[36px] bg-slate-200 rounded-lg shadow-xl text-center">
-            {checkDice() ? <Confetti numberOfPieces={500}/> : null}
-            <h1 className="text-[1.75rem] font-bold">Tenzies</h1>
-            {checkDice() ? <p className="w-full bg-violet-800 text-white rounded-lg p-3">CONGRATS!!<br/> You have matched all the tiles!</p> 
-            : <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>}
-            <div className="w-full grid gap-[15px] grid-cols-5 font-bold mt-5">
-                {diceElements}
+        <main className="w-[360px] sm:w-[360px] p-[36px] bg-slate-200 rounded-lg shadow-xl text-center">
+            {checkDice() ? <Confetti numberOfPieces={500} width={window.innerWidth || 300} height={window.innerHeight || 200}/> : null}
+            <div>
+                <h1 className="text-[1.75rem] font-bold">Tenzies</h1>
+                {checkDice() ? <p className="w-full bg-violet-800 text-white rounded-lg p-3">CONGRATS!!<br/> You have matched all the tiles!</p> 
+                : <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>}
+                <div className="w-full grid gap-[15px] grid-cols-5 font-bold mt-5">
+                    {diceElements}
+                </div>
+                <button 
+                className="mt-7 py-[6px] px-8 bg-violet-800 hover:bg-violet-500 text-white rounded-md shadow-md"
+                onClick={rollDice}
+                >{checkDice() ? "Restart Game" : "Roll"}</button>
             </div>
-            <button 
-            className="mt-7 py-[6px] px-8 bg-violet-800 hover:bg-violet-500 text-white rounded-md shadow-md"
-            onClick={rollDice}
-            >{checkDice() ? "Restart Game" : "Roll"}</button>
-        </main>
+    </main>
     )
 }
