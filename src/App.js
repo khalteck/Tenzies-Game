@@ -83,6 +83,7 @@ export default function App() {
                 onClick={rollDice}
                 >{checkDice() ? "Restart Game" : "Roll"}</button>
             </div>
+            <p className="w-full text-center text-[12px] text-slate-50 fixed bottom-[20px] left-0 text-[400] tracking-widest">&copy; 2022 Built by <a href="https://khalteck.netlify.app" className="underline text-blue-200">Khalid</a></p>
     </main>
     )
 }
